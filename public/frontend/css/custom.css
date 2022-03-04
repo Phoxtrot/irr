@@ -1,0 +1,13 @@
+*{
+    font-family: 'Luxurious Roman', cursive;
+}
+.checkout-form label{
+    font-size: 12px;
+    font-weight: 700
+}
+.checkout-form input{
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px
+}
+

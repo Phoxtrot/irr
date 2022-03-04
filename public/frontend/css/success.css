@@ -1,0 +1,77 @@
+.success-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.content {
+  background-color: var(--light-blue);
+  padding: 2rem 0.3rem;
+  text-align: left;
+  border-radius: 8px;
+  box-shadow: 5px 5px 20px;
+  width: 700px;
+  max-width: 95%;
+}
+.content h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: var(--color-blog);
+}
+.last {
+  margin-bottom: 1rem;
+}
+
+.proceed {
+  text-align: left;
+  color: var(--blue);
+  font-weight: 600;
+}
+.bank-details {
+  background-color: var(--white);
+  padding: 2rem;
+  text-align: left;
+  margin: 1rem auto;
+}
+.bank-details p {
+  font-size: 1rem;
+  margin-bottom: 1.4rem;
+  color: var(--blue);
+  font-weight: 900;
+}
+
+.home-btn {
+  padding: 0.5rem 2rem;
+  outline: none;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  border: transparent;
+  background-color: var(--color-blog);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+.home-btn:hover {
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+/* Form Media Query */
+
+@media screen and (max-width: 600px) {
+  .bank-details {
+    padding: 1rem 0.4rem;
+  }
+  .bank-details p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .content h1 {
+    font-size: 1.2rem;
+  }
+}
