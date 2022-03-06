@@ -1,4 +1,4 @@
-@extends('layouts\admin')
+@extends('layouts.admin')
 @section('content')
 <div class="container-fluid py-4">
     <div class="card-header">
@@ -26,7 +26,7 @@
                         <td>
                             <a href="{{route('student.show', $student->id)}}" class="btn btn-primary btn-sm">View</a>
 
-                           
+
 
                         </td>
                     </tr>
