@@ -2,22 +2,86 @@
 @section('content')
 <div class="container-fluid py-4">
     <div class=" card-body">
-        <h1 class=" text-center" >Admin Page</h1>
+        <h1 class=" text-center" >Student Details</h1>
       <div class="d-flex justify-content-center">
         <table class= "table table-striped" >
                 <tbody>
                   <tr>
-                    <th scope="row">Registrants</th>
-                    <td>Student</td>
-                    <td>Tutor</td>
+                    <th scope="row">Details</th>
+                    <th scope="row">Data</th>
                   </tr>
                   <tr>
-                    <th scope="row">Number</th>
-                    <td>{{$countStudent}}</td>
-                    <td>{{$countTutor}}</td>
+                    <td>First Name</td>
+                    <td>{{$student->firstname}}</td>
+                  </tr>
+                  <tr>
+                    <td>Last Name</td>
+                    <td>{{$student->lastname}}</td>
+                  </tr>
+                  <tr>
+                    <td>Gender</td>
+                    <td>{{$student->gender}}</td>
+                  </tr>
+                  <tr>
+                    <td>Language</td>
+                    <td>{{$student->language}}</td>
+                  </tr>
+                  <tr>
+                    <td>Phone Number</td>
+                    <td>{{$student->number}}</td>
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <td>{{$student->email}}</td>
+                  </tr>
+                  <tr>
+                    <td>DOB</td>
+                    <td>{{$student->dob}}</td>
+                  </tr>
+                  <tr>
+                    <td>Country</td>
+                    <td>{{$student->country}}</td>
+                  </tr>
+                  <tr>
+                    <td>Quran Level</td>
+                    <td>{{$student->quran_level}}</td>
+                  </tr>
+                  <tr>
+                    <td>Days Preffered</td>
+                    <td>{{$student->preffered_days}}</td>
+                  </tr>
+                  <tr>
+                    <td>Nok name</td>
+                    <td>{{$student->nok_name}}</td>
+                  </tr>
+                  <tr>
+                    <td>Nok email</td>
+                    <td>{{$student->nok_email}}</td>
+                  </tr>
+                  <tr>
+                    <td>Nok relationship</td>
+                    <td>{{$student->nok_relationship}}</td>
+                  </tr>
+                  <tr>
+                    <td>paid</td>
+                    @if ($student->paid == 1)
+                        <td>Yes</td>
+                    @else
+                    <td>No</td>
+                    @endif
+                  </tr>
+                  <tr>
+                    <td>Action</td>
+                    <td> <form action="{{route('student.destroy',$student->id)}}" method="POST">
+                        @csrf
+                        @method("DELETE")
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                    </form></td>
+
                   </tr>
                 </tbody>
               </table>
+
       </div>
     </div>
 

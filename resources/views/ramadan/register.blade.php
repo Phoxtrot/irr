@@ -55,15 +55,15 @@ Student
         </div>
         <div class="form-group">
           <label for="last_name">Date of Birth</label>
-          <input class="form-control" type="date" name="date" placeholder="Date" required=""  autocomplete="off">
+          <input class="form-control" type="date" name="dob" placeholder="Date" required=""  autocomplete="off">
 
         </div>
         <div class="form-group">
           <label for="last_name">Level of Quran recitation</label>
           <select class="form-control" name="quran_level">
             <option value="beginner" >I’m a beginner</option>
-            <option value="improve" >I want to improve on my Tajweed</option>
-            <option value="continue">I want to continue my memorization</option>
+            <option value="Improve Tajweed" >I want to improve on my Tajweed</option>
+            <option value="continue memoriazation">I want to continue my memorization</option>
             <option value="others">Others</option>
           </select>
         </div>
@@ -94,8 +94,8 @@ Student
         <div class="form-group">
           <label for="last_name">Prefferd days of Classes</label>
           <select class="form-control" name="class_days">
-            <option value="mwf">Mondays, Wednesdays, Fridays</option>
-            <option valuetts>Tuesdays, Thursdays, Saturdays</option>
+            <option value="Mondays, Wednesdays, Fridays">Mondays, Wednesdays, Fridays</option>
+            <option value="Tuesdays, Thursdays, Saturdays">Tuesdays, Thursdays, Saturdays</option>
           </select>
         </div>
       </div>
@@ -115,7 +115,7 @@ Student
       <div class="col-md-6">
         <div class="form-group">
           <label for="last_name">Email</label>
-          <input class="form-control" type="email" name="email" placeholder="Email" required="">
+          <input class="form-control" type="email" name="nok_email" placeholder="Email" required="">
         </div>
         </div>
         <div class="col-md-12">

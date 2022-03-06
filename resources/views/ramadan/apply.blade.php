@@ -33,7 +33,7 @@ Student
     </h3>
   </div>
 
-  <form name="contact_form" class="default-form contact-form" action="{{route('ramadansuccess')}}" method="post">
+  <form name="contact_form" class="default-form contact-form" action="{{route('tutor.create')}}" method="post">
       @csrf
     <h6>SECTION 1: APPLICANT’S DETAILS</h6>
     <div class="row">
@@ -55,7 +55,7 @@ Student
         </div>
         <div class="form-group">
           <label for="last_name">Date of Birth</label>
-          <input class="form-control" type="date" name="date" placeholder="Date" required=""  autocomplete="off">        </div>
+          <input class="form-control" type="date" name="dob" placeholder="Date" required=""  autocomplete="off">        </div>
 
         <div class="form-group">
           <label for="hizb">How many hizb have you memorized? </label>
@@ -124,7 +124,7 @@ Student
       <div class="col-md-6">
         <div class="form-group">
           <label for="last_name">Email</label>
-          <input class="form-control" type="email" name="email" placeholder="Email" required="">
+          <input class="form-control" type="email" name="nok_email" placeholder="Email" required="">
         </div>
         </div>
         <div class="col-md-12">

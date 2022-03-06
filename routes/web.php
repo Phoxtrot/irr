@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\TutorController;
 use App\Http\Controllers\FlutterwaveController;
 use  App\Http\Controllers\Admin\FrontendController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,12 @@ use  App\Http\Controllers\Admin\FrontendController;
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
+Route::get('/e-academy', function () {
+    return view('eacademy');
+})->name('eacademy');
+Route::get('/ramadan-class', function () {
+    return view('ramadan');
+})->name('ramadan');
 Route::get('/form', function () {
     return view('form');
 })->name('form');
@@ -37,9 +45,10 @@ Route::get('/registar', function () {
 Route::get('/apply', function () {
     return view('ramadan.apply');
 })->name('apply');
-Route::post('/congrats', function () {
+Route::get('/congrats', function () {
     return view('ramadan.success');
 })->name('ramadansuccess');
+Route::post('/tutor-create', [TutorController::class, 'store'])->name('tutor.create');
 // The route that the button calls to initialize payment
 Route::post('/pay', [FlutterwaveController::class, 'initialize'])->name('pay');
 // The callback url after a payment
@@ -49,5 +58,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/dashboard',  [FrontendController::class, 'index'])->name('dashboard');
+    Route::resource('/admin/student',  StudentController::class);
+    Route::resource('/admin/tutor',  TutorController::class);
 
 });

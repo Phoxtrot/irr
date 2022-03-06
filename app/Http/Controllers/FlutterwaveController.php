@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Student;
 use KingFlamez\Rave\Facades\Rave as Flutterwave;
 
 class FlutterwaveController extends Controller
@@ -11,8 +12,26 @@ class FlutterwaveController extends Controller
      * Initialize Rave payment process
      * @return void
      */
-    public function initialize(Request $request)
+    public function initialize(Request $request, Student $student)
     {
+        $request->validate([            
+            'email' => ['required', 'email','unique:students']                      
+        ]);
+        $student->create([
+            'firstname' => $request->firstname,
+            'lastname' => $request->lastname,
+            'gender' => $request->gender,
+            'language' => $request->language,
+            'number' => $request->number,
+            'email' => $request->email,
+            'dob' => $request->dob,
+            'country' => $request->country,
+            'quran_level' => $request->quran_level,
+            'preffered_days' => $request->class_days,
+            'nok_name' => $request->nok_name,
+            'nok_email' => $request->nok_email,
+            'nok_relationship' => $request->relationship,                
+        ]);
         //This generates a payment reference
         $reference = Flutterwave::generateReference();
 
@@ -52,7 +71,7 @@ class FlutterwaveController extends Controller
      * Obtain Rave callback information
      * @return void
      */
-    public function callback()
+    public function callback(Request $request, Student $student)
     {
 
         $status = request()->status;
@@ -62,6 +81,8 @@ class FlutterwaveController extends Controller
 
         $transactionID = Flutterwave::getTransactionIDFromCallback();
         $data = Flutterwave::verifyTransaction($transactionID);
+        $student = Student::where('email',$data->email)->first();
+        $student->paid = '1';
 
         return redirect('/')->with('status', 'Payment Succesful. Please check your mail for transaction details!' );
 

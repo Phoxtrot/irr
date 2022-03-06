@@ -2,22 +2,87 @@
 @section('content')
 <div class="container-fluid py-4">
     <div class=" card-body">
-        <h1 class=" text-center" >Admin Page</h1>
+        <h1 class=" text-center" >Tutor Details</h1>
       <div class="d-flex justify-content-center">
         <table class= "table table-striped" >
                 <tbody>
                   <tr>
-                    <th scope="row">Registrants</th>
-                    <td>Student</td>
-                    <td>Tutor</td>
+                    <th scope="row">Details</th>
+                    <th scope="row">Data</th>
                   </tr>
                   <tr>
-                    <th scope="row">Number</th>
-                    <td>{{$countStudent}}</td>
-                    <td>{{$countTutor}}</td>
+                    <td>First Name</td>
+                    <td>{{$tutor->firstname}}</td>
+                  </tr>
+                  <tr>
+                    <td>Last Name</td>
+                    <td>{{$tutor->lastname}}</td>
+                  </tr>
+                  <tr>
+                    <td>Gender</td>
+                    <td>{{$tutor->gender}}</td>
+                  </tr>
+                  <tr>
+                    <td>Language</td>
+                    <td>{{$tutor->language}}</td>
+                  </tr>
+                  <tr>
+                    <td>Phone Number</td>
+                    <td>{{$tutor->number}}</td>
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <td>{{$tutor->email}}</td>
+                  </tr>
+                  <tr>
+                    <td>DOB</td>
+                    <td>{{$tutor->dob}}</td>
+                  </tr>
+                  <tr>
+                    <td>Country</td>
+                    <td>{{$tutor->country}}</td>
+                  </tr>
+                  <tr>
+                    <td>Hizb Memorized</td>
+                    <td>{{$tutor->hizb}}</td>
+                  </tr>
+                  <tr>
+                    <td>Academic Qualification</td>
+                    <td>{{$tutor->academic_qualification}}</td>
+                  </tr>
+                  <tr>
+                    <td>Interview Date</td>
+                    <td>{{$tutor->interview_date}}</td>
+                  </tr>
+                  <tr>
+                    <td>Social Media</td>
+                    <td>{{$tutor->social_media}}</td>
+                  </tr>
+
+                  <tr>
+                    <td>Nok name</td>
+                    <td>{{$tutor->npk_name}}</td>
+                  </tr>
+                  <tr>
+                    <td>Nok email</td>
+                    <td>{{$tutor->nok_email}}</td>
+                  </tr>
+                  <tr>
+                    <td>Nok relationship</td>
+                    <td>{{$tutor->nok_relationship}}</td>
+                  </tr>
+                  <tr>
+                    <td>Action</td>
+                    <td> <form action="{{route('tutor.destroy',$tutor->id)}}" method="POST">
+                        @csrf
+                        @method("DELETE")
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                    </form></td>
+
                   </tr>
                 </tbody>
               </table>
+
       </div>
     </div>
 

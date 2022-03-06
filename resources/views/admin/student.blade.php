@@ -1,27 +1,40 @@
 @extends('layouts\admin')
 @section('content')
 <div class="container-fluid py-4">
-    <div class=" card-body">
-        <h1 class=" text-center" >Admin Page</h1>
-      <div class="d-flex justify-content-center">
-        <table class= "table table-striped" >
-                <tbody>
-                  <tr>
-                    <th scope="row">Registrants</th>
-                    <td>Student</td>
-                    <td>Tutor</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Number</th>
-                    <td>{{$countStudent}}</td>
-                    <td>{{$countTutor}}</td>
-                  </tr>
-                </tbody>
-              </table>
-      </div>
+    <div class="card-header">
+        <h4>Students</h4>
+        <hr>
     </div>
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Last Name</th>
+                    <th>First Name</th>
+                    <th>Phone Number </th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($students as $student )
+                    <tr>
+                        <td>{{$student->lastname}}</td>
+                        <td>{{$student->firstname}}</td>
+                        <td>{{$student->number}}</td>
+                        <td>{{$student->email}}</td>
+                        <td>
+                            <a href="{{route('student.show', $student->id)}}" class="btn btn-primary btn-sm">View</a>
 
-</div>
+                           
+
+                        </td>
+                    </tr>
+                @endforeach
+
+            </tbody>
+        </table>
+    </div>
 @endsection
 @section('scripts')
 <script>

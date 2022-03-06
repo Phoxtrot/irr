@@ -34,18 +34,19 @@
              <a href="{{route('welcome')}}" class="nav-link">Home</a>
          </li>
          <li class="nav-item">
-             <a href="#about" class="nav-link">About</a>
+             <a href="{{route('eacademy')}}" class="nav-link">E-Academy</a>
          </li>
          <li class="nav-item">
-             <a href="#courses" class="nav-link">Courses</a>
+             <a href="{{route('ramadan')}}" class="nav-link">The Noble Journey with Al-Qur'an</a>
          </li>
          <li class="nav-item">
-             <a href="#contact" class="nav-link">Contact</a>
+             <a href="#contact" class="nav-link">Zakat</a>
          </li>
      </ul>
-     <div class="nav-btn">
+     @yield('navbar')
+     {{-- <div class="nav-btn">
          <a href="{{route('form')}}" class="register-btn" >Apply</a>
-     </div>
+     </div> --}}
 
     <button class="bar-icon">
         <div><i class='fas fa-bars fa-2x ' ></i></div>
@@ -55,13 +56,13 @@
             <a href="{{route('welcome')}}" class="nav-link">Home</a>
         </li>
         <li class="mobile-item">
-            <a href="#about" class="nav-link">About</a>
+            <a href="{{route('eacademy')}}" class="nav-link">E-Academy</a>
         </li>
         <li class="mobile-item">
-            <a href="#courses" class="nav-link">Courses</a>
+            <a href="{{route('ramadan')}}" class="nav-link">The Noble Journey with Al-Qur'an</a>
         </li>
         <li class="mobile-item">
-            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#contact" class="nav-link">Zakat</a>
         </li>
         <div class="btn-container">
 

@@ -10,8 +10,8 @@ Tutor
 <link href="{{asset('frontend/css/plugins/slick/slick-theme.css')}}" rel="stylesheet" />
 <!-- FancyBox -->
 <link href="{{asset('frontend/css/plugins/fancybox/jquery.fancybox.min.css')}}" rel="stylesheet" />
-{{-- <!-- fontawesome -->
-<link rel="stylesheet" href="plugins/fontawesome/css/all.min.css"> --}}
+<!-- fontawesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- animate.css -->
 <link href="{{asset('frontend/css/plugins/animation/animate.min.css')}}" rel="stylesheet" />
 <!-- jquery-ui -->
