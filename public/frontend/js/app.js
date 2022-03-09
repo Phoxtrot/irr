@@ -6,10 +6,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
         let output = '';
         let ordered = [];
         data.forEach(country => {
-            ordered.push(country.name.common)            
+            ordered.push(country.name.common)
             ordered.sort()
         // output += `<option value = '${country.name.common}'>${country.name.common}</option> `
         });
+        output += `<option value = 'others'>Select Country</option> `
         ordered.forEach(list =>{
             output += `<option value = '${list}'>${list}</option> `
         })

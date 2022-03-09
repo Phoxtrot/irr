@@ -26,8 +26,10 @@ class CreateTutorsTable extends Migration
             $table->string('hizb');
             $table->string('academic_qualification');
             $table->string('interview_date');
-            $table->string('social_media');
-            $table->string('npk_name');
+            $table->string('social_media_1');
+            $table->string('social_media_2');
+            $table->string('nok_name');
+            $table->string('nok_number');
             $table->string('nok_email');
             $table->string('nok_relationship');
             $table->timestamps();

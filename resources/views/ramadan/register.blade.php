@@ -39,64 +39,114 @@ Student
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-           <label for="last_name" >Last Name</label>
-          <input class="form-control" type="text" name="lastname" placeholder="Last Name" required="">
-        </div>
+            <label for="first_name">First Name</label>
+            <input class="form-control" type="text" name="firstname" placeholder="First Name" value="{{old('firstname')}}" >
+            @error('firstname')
+                    	<div class="error" style="color: #ed3c0d;text-align: left;">
+                   		This field is required
+                    	</div>
+          @enderror
+          </div>
         <div class="form-group">
           <label for="last_name">Gender</label>
-          <select class="form-control" name="gender">
+          <select class="form-select" name="gender" value="{{old('gender')}}">
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
+          @error('gender')
+                    	<div class="error" style="color: #ed3c0d;text-align: left;">
+                            This field is required
+                    	</div>
+          @enderror
         </div>
         <div class="form-group">
-          <label for="last_name">Phone Number</label>
-          <input class="form-control" type="text" name="number" placeholder="Phone Number" required="">
+          <label for="last_name">Phone Number (preferably WhatsApp)</label>
+          <input class="form-control" type="text" name="number" placeholder="Phone Number" value="{{old('number')}}" >
+          @error('number')
+                    	<div class="error" style="color: #ed3c0d;text-align: left;">
+                            This field is required
+                    	</div>
+          @enderror
         </div>
         <div class="form-group">
           <label for="last_name">Date of Birth</label>
-          <input class="form-control" type="date" name="dob" placeholder="Date" required=""  autocomplete="off">
-
+          <input class="form-control" type="date" name="dob" placeholder="Date" value="{{old('dob')}}"   autocomplete="off">
+          @error('dob')
+          <div class="error" style="color: #ed3c0d;text-align: left;">
+              This field is required
+          </div>
+          @enderror
         </div>
         <div class="form-group">
           <label for="last_name">Level of Quran recitation</label>
-          <select class="form-control" name="quran_level">
+          <select class="form-control" name="quran_level" value="{{old('quran_level')}}">
             <option value="beginner" >I’m a beginner</option>
             <option value="Improve Tajweed" >I want to improve on my Tajweed</option>
             <option value="continue memoriazation">I want to continue my memorization</option>
             <option value="others">Others</option>
           </select>
+          @error('quran_level')
+            <div class="error" style="color: #ed3c0d;text-align: left;">
+                This field is required
+            </div>
+          @enderror
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <label for="first_name">First Name</label>
-          <input class="form-control" type="text" name="firstname" placeholder="First Name" required="">
-        </div>
+            <label for="lastname" >Last Name</label>
+           <input class="form-control" type="text" name="lastname" placeholder="Last Name" value="{{old('lastname')}}" >
+           @error('lastname')
+           <div class="error" style="color: #ed3c0d;text-align: left;">
+               This field is required
+           </div>
+         @enderror
+         </div>
         <div class="form-group">
           <label for="last_name">Native Language</label>
-          <select class="form-control" name="language">
+          <select class="form-control" name="language" value="{{old('language')}}">
             <option value="yoruba">Yoruba</option>
             <option value="igbo">Igbo</option>
             <option value="hausa">Hausa</option>
             <option value="others">Others</option>
           </select>
+          @error('language')
+          <div class="error" style="color: #ed3c0d;text-align: left;">
+              This field is required
+          </div>
+        @enderror
         </div>
         <div class="form-group">
           <label for="last_name">Email</label>
-          <input class="form-control" type="email" name="email" placeholder="Email" required="">
+          <input class="form-control" type="email" name="email" placeholder="Email"  value="{{old('email')}}" >
+          @error('email')
+                    	<div class="error" style="color: #ed3c0d;text-align: left;">
+                   		{{$message}}
+                    	</div>
+          @enderror
         </div>
         <div class="form-group">
           <label for="last_name">Country</label>
-          <select class="form-control" id="countries" name="country">
+          <select class="form-control" id="countries" name="country"  value="{{old('country')}}">
+            <option value="others">Select Country</option>
           </select>
+          @error('country')
+          <div class="error" style="color: #ed3c0d;text-align: left;">
+              This field is required
+          </div>
+        @enderror
         </div>
         <div class="form-group">
           <label for="last_name">Prefferd days of Classes</label>
-          <select class="form-control" name="class_days">
+          <select class="form-control" name="class_days"  value="{{old('class_days')}}">
             <option value="Mondays, Wednesdays, Fridays">Mondays, Wednesdays, Fridays</option>
             <option value="Tuesdays, Thursdays, Saturdays">Tuesdays, Thursdays, Saturdays</option>
           </select>
+          @error('class_days')
+          <div class="error" style="color: #ed3c0d;text-align: left;">
+              This field is required
+          </div>
+        @enderror
         </div>
       </div>
       <h6 style="padding-top: 20px;padding-bottom: 15px;">SECTION 2: Details of Next of Kin (NOK) </h6>
@@ -104,19 +154,43 @@ Student
       <div class="col-md-6">
         <div class="form-group">
            <label for="name" >Name of Next of Kin</label>
-          <input class="form-control" type="text" name="nok_name" placeholder="Full Name" required="">
+          <input class="form-control" type="text" name="nok_name" placeholder="Full Name"  value="{{old('nok_name')}}" >
+          @error('nok_name')
+          <div class="error" style="color: #ed3c0d;text-align: left;">
+              This field is required
+          </div>
+        @enderror
         </div>
         <div class="form-group">
-           <label for="relationship">Your relationship with your NOK</label>
-          <input class="form-control" type="text" name="relationship" placeholder="Relationship with Next of Kin" required="">
+            <label for="last_name">Email</label>
+            <input class="form-control" type="email" name="nok_email" placeholder="Email"  value="{{old('nok_email')}}" >
+            @error('nok_email')
+            <div class="error" style="color: #ed3c0d;text-align: left;">
+                This field is required
+            </div>
+          @enderror
         </div>
-
-      </div>
+    </div>
       <div class="col-md-6">
         <div class="form-group">
-          <label for="last_name">Email</label>
-          <input class="form-control" type="email" name="nok_email" placeholder="Email" required="">
+          <label for="number">Phone Number</label>
+          <input class="form-control" type="text" name="nok_number" placeholder="Phone Number"  value="{{old('nok_number')}}" >
+          @error('nok_number')
+          <div class="error" style="color: #ed3c0d;text-align: left;">
+              This field is required
+          </div>
+        @enderror
         </div>
+        <div class="form-group">
+            <label for="relationship">Your relationship with your NOK</label>
+           <input class="form-control" type="text" name="nok_relationship" placeholder="Relationship with Next of Kin"  value="{{old('nok_relationship')}}" >
+           @error('nok_relationship')
+           <div class="error" style="color: #ed3c0d;text-align: left;">
+               This field is required
+           </div>
+         @enderror
+         </div>
+
         </div>
         <div class="col-md-12">
         <p><b>Disclaimer</b></p>
@@ -124,7 +198,7 @@ Student
 
        </div>
        <div >
-          <input type="checkbox"name="disclaimer">
+          <input type="checkbox"name="disclaimer" required>
           <label>I have read and agreed to the policies, terms and conditions of the program.</label>
        </div>
 

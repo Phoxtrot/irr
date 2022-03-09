@@ -3,17 +3,12 @@
 E-Academy
 @endsection
 @section('navbar')
-<div class="nav-item">
-    <div class="nav-btn >
-        <a href="{{route('form')}}" class="register-btn" >Apply</a>
-    </div>
-</div>
 @endsection
 @section('content')
 <section id="home" class="header-section section">
     <div class="left-header">
         <h1 >quality islamic education from the comfort of your home</h1>
-        <p>Bringing Islamic knowledge close to interested individuals</p>
+        <p>Bringing Islamic knowledge closer to you</p>
     </div>
     <div class="header-image">
         <img src="{{ asset('frontend/img/quran-greens.png') }}" alt="Al qur'an" class="quran-img">

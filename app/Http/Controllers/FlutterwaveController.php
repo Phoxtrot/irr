@@ -14,8 +14,21 @@ class FlutterwaveController extends Controller
      */
     public function initialize(Request $request, Student $student)
     {
-        $request->validate([            
-            'email' => ['required', 'email','unique:students']                      
+        $request->validate([
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'gender' => 'required',
+            'language' => 'required',
+            'number' => 'required',
+            'dob' => 'required',
+            'country' => 'required',
+            'quran_level' => 'required',
+            'class_days' => 'required',
+            'nok_name' => 'required',
+            'nok_number' => 'required',
+            'nok_email' => 'required',
+            'nok_relationship' => 'required',
+            'email' => ['required', 'email','unique:students']
         ]);
         $student->create([
             'firstname' => $request->firstname,
@@ -29,8 +42,9 @@ class FlutterwaveController extends Controller
             'quran_level' => $request->quran_level,
             'preffered_days' => $request->class_days,
             'nok_name' => $request->nok_name,
+            'nok_number' => $request->nok_number,
             'nok_email' => $request->nok_email,
-            'nok_relationship' => $request->relationship,                
+            'nok_relationship' => $request->nok_relationship,
         ]);
         //This generates a payment reference
         $reference = Flutterwave::generateReference();
@@ -38,7 +52,7 @@ class FlutterwaveController extends Controller
         // Enter the details of the payment
         $data = [
             'payment_options' => 'card,banktransfer',
-            'amount' => 4000,
+            'amount' => 5000,
             'email' => request()->email,
             'tx_ref' => $reference,
             'currency' => "NGN",
@@ -51,7 +65,7 @@ class FlutterwaveController extends Controller
             ],
 
             "customizations" => [
-                "title" => 'Ibadur-Rahman E-Academy (IR E-Academy)',
+                "title" => 'Ibadur-Rahman Institute (IR Institute)',
                 "description" => "Start Your Journey with the Glorious Quran this Ramadan"
             ]
         ];

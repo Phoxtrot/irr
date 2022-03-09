@@ -27,7 +27,7 @@
 <body>
     <nav class="navbar section">
         <a href="{{route('welcome')}}" class="logo">
-            <img src="{{ asset('frontend/img/ibadulrahman-logo.png') }}" alt="ibadulrrahman logo" class="logo">
+            <img src="{{ asset('frontend/img/irr-logo.png') }}" alt="ibadulrrahman logo" class="logo">
         </a>
      <ul class="nav-menu" >
          <li class="nav-item">
@@ -37,11 +37,12 @@
              <a href="{{route('eacademy')}}" class="nav-link">E-Academy</a>
          </li>
          <li class="nav-item">
-             <a href="{{route('ramadan')}}" class="nav-link">The Noble Journey with Al-Qur'an</a>
+             <a href="{{route('ramadan')}}" class="nav-link">The Noble Journey</a>
          </li>
          <li class="nav-item">
-             <a href="#contact" class="nav-link">Zakat</a>
+             <a href="#contact" class="nav-link">Zakat* (Coming Soon)</a>
          </li>
+
      </ul>
      @yield('navbar')
      {{-- <div class="nav-btn">
@@ -76,29 +77,52 @@
         <div class="footer-links">
             <div class="footer-link">
                 <a href="#home" class="logo">
-                    <img src="{{ asset('frontend/img/ibadulrahman-logo.png') }}" alt="ibadulrrahman logo" class="logo">
+                    <img src="{{ asset('frontend/img/irr-logo.png') }}" alt="ibadulrrahman logo" class="logo">
                 </a>
                 <p>IRInstitute E-Academy</p>
             </div>
             <div class="footer-link">
                 <h4>Links</h4>
-                <a href="#about">about</a>
-                <a href="#courses">courses</a>
-                <a href="#contact">contact</a>
+                <a href="{{route('eacademy')}}">E-Academy</a>
+                <a href="#{{route('ramadan')}}">The Noble Journey</a>
+                <a href="#contact">Zakat* (Coming Soon)</a>
             </div>
             <div class="footer-link">
                 <h4>Socials</h4>
-                <p class="social">
-                    <i class="fab fa-whatsapp"></i>
-                    <a href="https://wa.link/hd8r8b">Whatsapp</a>
-                </p>
-                <p class="social">
-                    <i class="fas fa-envelope-square"></i>
-                    <a href="mailto:appform@irinstitute-ng.org">Email</a>
-                </p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="social">
+                            <a href="https://wa.link/hd8r8b">
+                                <i class="fab fa-whatsapp fa-2x"></i>
+                            </a>
+                        </p>
+                        <p class="social">
+                            <a href="https://www.instagram.com/ir_institute/">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                        </p>
+                        <p class="social">
+                            <a href="mailto:appform@irinstitute-ng.org ">
+                                <i class="fas fa-envelope-square fa-2x" ></i>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="social">
+                            <a href="https://web.facebook.com/ir_institute">
+                                <i class="fab fa-facebook fa-2x"></i>
+                            </a>
+                        </p>
+                        <p class="social">
+                            <a href="https://www.youtube.com/channel/UCAYITCyoYlXxyN8BGhpem6A">
+                                <i class="fab fa-youtube fa-2x"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <p class="copyright">&copy;2021 IRInstitute E-Academy all rights reserved </p>
+        <p class="copyright">&copy;2022 IRInstitute all rights reserved </p>
     </section>
 
     @yield("js")

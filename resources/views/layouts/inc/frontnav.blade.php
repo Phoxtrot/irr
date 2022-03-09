@@ -1,24 +1,56 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="{{route('front.index')}}">E-Shop</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link {{Request::is('/')?'active':''}} " aria-current="page" href="{{route('front.index')}}">Home</a>
+<nav id="navbar" class="navbar">
+    <ul>
+      <li><a class="nav-link " href="">Home</a></li>
+      <li class="dropdown"><a class="nav-link active" href=""><span>Filter Student</span> <i class="bi bi-chevron-down"></i></a>
+        <ul>
+          <li class="dropdown"><a class="nav-link scrollto" href="#courses"><span>By Gender</span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="{{route('student.male')}}">Male</a></li>
+              <li><a class="nav-link scrollto" href="{{route('student.female')}}">Female</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link {{Request::is('/category')?'active':''}}" href="{{route('front.cat')}}">Categories</a>
+          <li class="dropdown"><a class="nav-link scrollto" href="#courses"><span>By Language</span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="{{route('student.yoruba')}}">Yoruba</a></li>
+              <li><a class="nav-link scrollto" href="{{route('student.igbo')}}">Igbo</a></li>
+              <li><a class="nav-link scrollto" href="{{route('student.hausa')}}">Hausa</a></li>
+              <li><a class="nav-link scrollto" href="{{route('student.others')}}">Others</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link {{Request::is('/cart')?'active':''}}" href="{{route('cart')}}">Cart</a>
-          </li>          
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+          <li class="dropdown"><a class="nav-link scrollto" href="#courses"><span>Prefferd Days</span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="{{route('student.mwf')}}">Mondays, Wednesdays, Fridays</a></li>
+              <li><a class="nav-link scrollto" href="{{route('student.tts')}}">Tuesdays, Thursdays, Saturdays</a></li>
+            </ul>
           </li>
         </ul>
-      </div>
-    </div>
-  </nav>
+      </li>
+      <li class="dropdown"><a class="nav-link active" href=""><span>Filter Tutor</span> <i class="bi bi-chevron-down"></i></a>
+        <ul>
+          <li class="dropdown"><a class="nav-link scrollto" href="#courses"><span>By Gender</span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="{{route('tutor.male')}}">Male</a></li>
+              <li><a class="nav-link scrollto" href="{{route('tutor.female')}}">Female</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a class="nav-link scrollto" href="#courses"><span>By Language</span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="{{route('tutor.yoruba')}}">Yoruba</a></li>
+              <li><a class="nav-link scrollto" href="{{route('tutor.igbo')}}">Igbo</a></li>
+              <li><a class="nav-link scrollto" href="{{route('tutor.hausa')}}">Hausa</a></li>
+              <li><a class="nav-link scrollto" href="{{route('tutor.others')}}">Others</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a class="nav-link scrollto" href="#courses"><span>Hizb Memorized</span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="{{route('tutor.10')}}">10</a></li>
+              <li><a class="nav-link scrollto" href="{{route('tutor.20')}}">20</a></li>
+              <li><a class="nav-link scrollto" href="{{route('tutor.40')}}">40</a></li>
+              <li><a class="nav-link scrollto" href="{{route('tutor.60')}}">60</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <i class="bi bi-list mobile-nav-toggle"></i>
+</nav><!-- .navbar -->

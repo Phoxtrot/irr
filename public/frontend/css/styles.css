@@ -94,8 +94,10 @@ a {
   z-index: 100;
 }
 .logo {
-  width: 6rem;
-  height: 4rem;
+  width: 5rem;
+  height: 60px;
+  margin-left: 0px;
+  padding: 0px;
 }
 .nav-menu {
   flex-basis: 90%;
@@ -621,8 +623,8 @@ a {
     text-align: center;
   }
   .logo {
-    width: 4rem;
-    height: 4rem;
+    width: 10rem;
+    height: 10rem;
   }
 }
 
@@ -704,3 +706,12 @@ a {
     transition: 0.4s;
     border-radius: 50px;
   }
+  .review {
+    margin: 0;
+    padding :0;
+        list-style: none;
+    }
+
+    .review li {
+    display: inline-block;
+    }

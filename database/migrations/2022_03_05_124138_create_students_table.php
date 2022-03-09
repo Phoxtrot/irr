@@ -26,6 +26,7 @@ class CreateStudentsTable extends Migration
             $table->string('quran_level');
             $table->string('preffered_days');
             $table->string('nok_name');
+            $table->string('nok_number');
             $table->string('nok_email');
             $table->string('nok_relationship');
             $table->string('paid')->default('0');
