@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 @section('title')
-Homepage
+Ibadur-Rahman Institute
 @endsection
 @section('content')
 <section id="home" class="header-section section">

@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 @section('title')
-Student
+Application
 @endsection
 @section('css')
 <!-- bootstrap -->
