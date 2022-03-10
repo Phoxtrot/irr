@@ -20,8 +20,7 @@ Student
 <link href="{{asset('frontend/css/plugins/timePicker/timePicker.css')}}" rel="stylesheet" />
 <!-- Stylesheets -->
 <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet" />
-<!--Favicon-->
-<link href="{{asset('frontend/img/favicon.png')}}" rel="icon" type="image/x-icon" />
+
 @endsection
 @section('content')
 <div class="page-wrapper sect">
