@@ -19,9 +19,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
   />
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180"  href="{{asset('frontend/favicon_io/apple-touch-icon.png')}}"/>
-  <link rel="icon" type="image/png" sizes="32x32"  href="{{asset('frontend/favicon_io/favicon-32x32.png')}}"/>
-  <link rel="icon" type="image/png" sizes="16x16"  href="{{asset('frontend/favicon_io/favicon-16x16.png')}}"/>
+  <link rel="icon" type="image/png" sizes="16x16"  href="{{asset('frontend/img/irr-logo.png')}}"/>
   <link rel="manifest" href="{{asset('frontend/favicon_io/site.webmanifest')}}"/>
 </head>
 <body>
@@ -79,7 +77,7 @@
                 <a href="#home" class="logo">
                     <img src="{{ asset('frontend/img/irr-logo.png') }}" alt="ibadulrrahman logo" class="logo">
                 </a>
-                <p>IRInstitute E-Academy</p>
+
             </div>
             <div class="footer-link">
                 <h4>Links</h4>

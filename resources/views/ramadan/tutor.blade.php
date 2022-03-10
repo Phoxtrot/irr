@@ -31,16 +31,18 @@ Tutor
       <div class="row">
         <div class="col-lg-8">
           <div class="story-content">
-            <h2>Be one of the 1000  muslims to facilitate the Noble Journey</h2>
+            <h2>Be one of the 100  muslims to facilitate the Noble Journey</h2>
               <p>The month of Ramadan is that in which the Quran was revealed as guidance for the people. Here is an opportunity for you and  your family to start your journey with the glorious Quran from the comfort of your home  </p>
-              <p>This program is a virtual one-on-one series of sessions with experienced tutors to teach and practice the art of reciting the Quran correctly. <b>The Messenger of Allah said, "The one who is proficient in the recitation of the Quran will be with the honourable and obedient scribes (angels) and he who recites the Quran and finds it difficult to recite, doing his best to recite it in the best way possible, will have a double reward." Al-Bukhari and Muslim </b></p>
+              <p>This program is a virtual one-on-one series of sessions with experienced tutors to teach and practice the art of reciting
+                  the Quran correctly. <b>The Messenger of Allah said, "The best amongst you is the one who learns the Qur'an and teaches it." Al-Bukhari and Muslim </b></p>
               <h6>Why you should join this program</h6>
               <ul class="review">
                 <p><i class="fa-solid fa-check-double"></i>One-on-One sessions with your students </p>
                 <p><i class="fa-solid fa-check-double"></i>Flexible to suit your schedule</p>
                 <p><i class="fa-solid fa-check-double"></i>Improve your understanding of At-Tajweed by having access to pre-recorded lectures and accessible at all times</p>
-                <p><i class="fa-solid fa-check-double"></i>Based on your level of convenience, you can choose to take between 1 and 10 students daily
-                  A token of monetary appreciation
+                <p><i class="fa-solid fa-check-double"></i>Based on your level of convenience, you can choose to take between 1 and 10 students daily </p>
+                <p><i class="fa-solid fa-check-double"></i>
+                    A token of monetary appreciation
                   </p>
                 <p><i class="fa-solid fa-check-double"></i>Gender Segregation: There are separate teachers for males and females.</p>
                 <p><i class="fa-solid fa-check-double"></i>The best of all, amass great reward before, during and after the month of Ramadan.</p>
@@ -49,11 +51,11 @@ Tutor
               <ul class="review">
                 <p><i class="fa-solid fa-check-double"></i><b>Duration:</b> 3 months</p>
                 <p><i class="fa-solid fa-check-double"></i><b>Class Starts:</b> April 1st, 2022</p>
-                <p><i class="fa-solid fa-check-double"></i><b>Registration deadline:</b>May 1st, 2022</p>
+                <p><i class="fa-solid fa-check-double"></i><b>Application deadline:</b>April 17th, 2022</p>
                 <p><i class="fa-solid fa-check-double"></i><b>Closure: </b> July 2nd, 2022</p>
               </ul>
               <h6>Eligibility Criteria</h6>
-              <p>All registrants are required to fulfill the following requirements as at the time of their registration</p>
+              <p>All applicants are required to fulfill the following requirements as at the time of their application</p>
               <ul class="review">
                 <p><i class="fa-solid fa-check-double"></i>Muslim by faith</p>
                 <p><i class="fa-solid fa-check-double"></i>Comfortable in communicating in English language</p>
@@ -93,7 +95,7 @@ Tutor
                 <p><i class="fa-solid fa-check-double"></i>All tutors are mandated to spend 20-40 minutes teaching each student daily</p>
                 <p><i class="fa-solid fa-check-double"></i>Two (2) consecutive absences without prior notice to your supervisor and students will attract automatic disqualification.</p>
                 <p><i class="fa-solid fa-check-double"></i>All participants (in conjunction with the tutors) will be requested to set a milestone after the third class.</p>
-                <p><i class="fa-solid fa-check-double"></i>The token of appreciation is payable on the 25th of Ramadan, 1443 OR 25th of June 2022 (equivalent to seven days to the closure of the program).</p>
+                <p><i class="fa-solid fa-check-double"></i>The token of appreciation is payable on the 25th of June 2022 (equivalent to seven days to the closure of the program).</p>
               </ul>
               <div class="text-center"><a href="{{route('apply')}}"><button name="submit" type="submit">Apply Now</button></a> </div>
           </div>

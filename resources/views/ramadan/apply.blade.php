@@ -93,7 +93,7 @@ Student
           @enderror
         </div>
         <div class="form-group">
-          <label for="date">Preffered date of Interview (limited to Thursday and Fridays between 12th of March and 20th of March 2022.)</label>
+          <label for="date">Preffered date of Interview (limited to Thursdays and Fridays between 10th of March and 22nd of April 2022.)</label>
           <select class="form-control" name="interview_date">
             <option value="10/03/2022" >10/03/2022</option>
             <option value="11/03/2022" >11/03/2022</option>

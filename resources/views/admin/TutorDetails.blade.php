@@ -68,6 +68,10 @@
                     <td>{{$tutor->nok_email}}</td>
                   </tr>
                   <tr>
+                    <td>Nok Phone Number</td>
+                    <td>{{$tutor->nok_number}}</td>
+                  </tr>
+                  <tr>
                     <td>Nok relationship</td>
                     <td>{{$tutor->nok_relationship}}</td>
                   </tr>

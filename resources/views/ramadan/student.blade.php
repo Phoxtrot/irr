@@ -48,7 +48,7 @@ Student
             <h6>What you stand to achieve</h6>
             <ul class="review">
               <p><i class="fa-solid fa-check-double"></i>Understanding of the recitation rules</p>
-              <p><i class="fa-solid fa-check-double"></i>2.5 months of one-on-one practice with your tutor</p>
+              <p><i class="fa-solid fa-check-double"></i>3 months of one-on-one practice with your tutor</p>
               <p><i class="fa-solid fa-check-double"></i>Quran memorization</p>
               <p><i class="fa-solid fa-check-double"></i>Improved recitation during the month Ramadan and more rewards insha Allah</p>
             </ul>

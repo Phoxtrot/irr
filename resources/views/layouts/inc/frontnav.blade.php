@@ -1,4 +1,4 @@
-<nav id="navbar" class="navbar">
+<nav id="navbar" class="navbar justify-content-center">
     <ul>
       <li><a class="nav-link " href="">Home</a></li>
       <li class="dropdown"><a class="nav-link active" href=""><span>Filter Student</span> <i class="bi bi-chevron-down"></i></a>

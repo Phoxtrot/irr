@@ -30,6 +30,7 @@ class FlutterwaveController extends Controller
             'nok_relationship' => 'required',
             'email' => ['required', 'email','unique:students']
         ]);
+        $request->session()->put('email',$request->email);
         $student->create([
             'firstname' => $request->firstname,
             'lastname' => $request->lastname,
@@ -87,7 +88,7 @@ class FlutterwaveController extends Controller
      */
     public function callback(Request $request, Student $student)
     {
-
+        $email = $request->session()->get('email');
         $status = request()->status;
 
         //if payment is successful
@@ -95,14 +96,15 @@ class FlutterwaveController extends Controller
 
         $transactionID = Flutterwave::getTransactionIDFromCallback();
         $data = Flutterwave::verifyTransaction($transactionID);
-        $student = Student::where('email',$data->email)->first();
+
+        $student = Student::where('email',$email)->first();
         $student->paid = '1';
 
-        return redirect('/')->with('status', 'Payment Succesful. Please check your mail for transaction details!' );
+        return redirect()->route('welcome')->with('status', 'Payment Succesful. Please check your mail for transaction details!' );
 
         }
         elseif ($status ==  'cancelled'){
-            return redirect('/')->with('status', 'Payment was Cancelled. Please try again');
+            return redirect()->route('welcome')->with('status', 'Payment was Cancelled. Please try again');
         }
         else{
             //Put desired action/code after transaction has failed here
