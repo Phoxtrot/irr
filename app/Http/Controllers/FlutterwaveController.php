@@ -93,14 +93,15 @@ class FlutterwaveController extends Controller
 
         //if payment is successful
         if ($status ==  'successful') {
-
+            $student = Student::where('email',$email)->first();
+            $student->paid = '1';
+            $student->update();
         $transactionID = Flutterwave::getTransactionIDFromCallback();
         $data = Flutterwave::verifyTransaction($transactionID);
 
-        $student = Student::where('email',$email)->first();
-        $student->paid = '1';
 
-        return redirect()->route('welcome')->with('status', 'Payment Succesful. Please check your mail for transaction details!' );
+
+        return redirect()->route('paymentsuccess')->with('status', 'Payment Succesful. Please check your mail for transaction details!' );
 
         }
         elseif ($status ==  'cancelled'){

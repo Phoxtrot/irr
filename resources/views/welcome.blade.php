@@ -27,4 +27,9 @@ Ibadur-Rahman Institute
 @endsection
 @section('js')
 <script src="{{asset('frontend/js/index.js')}}"></script>
+@if (session('status'))
+    <script>
+        swal("Good job!", "{{session('status')}}", "success");
+    </script>
+  @endif
 @endsection

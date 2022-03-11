@@ -45,18 +45,15 @@ Registration
                     	</div>
           @enderror
           </div>
-        <div class="form-group">
-          <label for="last_name">Gender</label>
-          <select class="form-select" name="gender" value="{{old('gender')}}">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-          @error('gender')
-                    	<div class="error" style="color: #ed3c0d;text-align: left;">
-                            This field is required
-                    	</div>
-          @enderror
-        </div>
+          <div class="form-group">
+            <label for="lastname" >Last Name</label>
+           <input class="form-control" type="text" name="lastname" placeholder="Last Name" value="{{old('lastname')}}" >
+           @error('lastname')
+           <div class="error" style="color: #ed3c0d;text-align: left;">
+               This field is required
+           </div>
+         @enderror
+         </div>
         <div class="form-group">
           <label for="last_name">Phone Number (preferably WhatsApp)</label>
           <input class="form-control" type="text" name="number" placeholder="Phone Number" value="{{old('number')}}" >
@@ -92,14 +89,18 @@ Registration
       </div>
       <div class="col-md-6">
         <div class="form-group">
-            <label for="lastname" >Last Name</label>
-           <input class="form-control" type="text" name="lastname" placeholder="Last Name" value="{{old('lastname')}}" >
-           @error('lastname')
-           <div class="error" style="color: #ed3c0d;text-align: left;">
-               This field is required
-           </div>
-         @enderror
-         </div>
+            <label for="last_name">Gender</label>
+            <select class="form-select" name="gender" value="{{old('gender')}}">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+            @error('gender')
+                          <div class="error" style="color: #ed3c0d;text-align: left;">
+                              This field is required
+                          </div>
+            @enderror
+          </div>
+
         <div class="form-group">
           <label for="last_name">Native Language</label>
           <select class="form-control" name="language" value="{{old('language')}}">

@@ -48,6 +48,9 @@ Route::get('/apply', function () {
 Route::get('/congrats', function () {
     return view('ramadan.success');
 })->name('ramadansuccess');
+Route::get('/succcess', function () {
+    return view('ramadan.paymentsuccess');
+})->name('paymentsuccess');
 Route::post('/tutor-create', [TutorController::class, 'apply'])->name('tutor.apply');
 // The route that the button calls to initialize payment
 Route::post('/pay', [FlutterwaveController::class, 'initialize'])->name('pay');

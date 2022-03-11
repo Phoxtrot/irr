@@ -58,15 +58,11 @@
             <a href="{{route('eacademy')}}" class="nav-link">E-Academy</a>
         </li>
         <li class="mobile-item">
-            <a href="{{route('ramadan')}}" class="nav-link">The Noble Journey with Al-Qur'an</a>
+            <a href="{{route('ramadan')}}" class="nav-link">The Noble Journey</a>
         </li>
         <li class="mobile-item">
             <a href="#contact" class="nav-link">Zakat</a>
-        </li>
-        <div class="btn-container">
-
-            <a href="{{route('form')}}" class="register-btn">Apply</a>
-        </div>
+        </li>      
     </ul>
     </nav>
     @yield("content")
@@ -82,7 +78,7 @@
             <div class="footer-link">
                 <h4>Links</h4>
                 <a href="{{route('eacademy')}}">E-Academy</a>
-                <a href="#{{route('ramadan')}}">The Noble Journey</a>
+                <a href="{{route('ramadan')}}">The Noble Journey</a>
                 <a href="#contact">Zakat* (Coming Soon)</a>
             </div>
             <div class="footer-link">
