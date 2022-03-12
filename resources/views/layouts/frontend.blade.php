@@ -103,7 +103,7 @@
                     </div>
                     <div class="col-md-6">
                         <p class="social">
-                            <a href="https://web.facebook.com/ir_institute">
+                            <a href="https://web.facebook.com/irinstitute">
                                 <i class="fab fa-facebook fa-2x"></i>
                             </a>
                         </p>
