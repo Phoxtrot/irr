@@ -14,7 +14,7 @@ class TutorController extends Controller
     }
     public function show(Tutor $tutor)    {
 
-        return  view('admin.tutorDetails', compact('tutor'));
+        return  view('admin.tutorInfo', compact('tutor'));
     }
     public function apply(Request $request, Tutor $tutor)
     {
