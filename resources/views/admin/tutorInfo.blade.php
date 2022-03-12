@@ -56,12 +56,16 @@
                   </tr>
                   <tr>
                     <td>Social Media</td>
-                    <td>{{$tutor->social_media}}</td>
+                    <td>{{$tutor->social_media_1}}</td>
+                  </tr>
+                  <tr>
+                    <td>Social Media</td>
+                    <td>{{$tutor->social_media_2}}</td>
                   </tr>
 
                   <tr>
                     <td>Nok name</td>
-                    <td>{{$tutor->npk_name}}</td>
+                    <td>{{$tutor->nok_name}}</td>
                   </tr>
                   <tr>
                     <td>Nok email</td>
