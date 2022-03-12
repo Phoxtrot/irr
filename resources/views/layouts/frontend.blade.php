@@ -62,7 +62,7 @@
         </li>
         <li class="mobile-item">
             <a href="#contact" class="nav-link">Zakat</a>
-        </li>      
+        </li>
     </ul>
     </nav>
     @yield("content")
@@ -86,29 +86,29 @@
                 <div class="row">
                     <div class="col-md-6">
                         <p class="social">
-                            <a href="https://wa.link/hd8r8b">
+                            <a href="https://wa.link/hd8r8b" target="_blank">
                                 <i class="fab fa-whatsapp fa-2x"></i>
                             </a>
                         </p>
                         <p class="social">
-                            <a href="https://www.instagram.com/ir_institute/">
+                            <a href="https://www.instagram.com/ir_institute/" target="_blank">
                                 <i class="fab fa-instagram fa-2x"></i>
                             </a>
                         </p>
                         <p class="social">
-                            <a href="mailto:appform@irinstitute-ng.org ">
+                            <a href="mailto:appform@irinstitute-ng.org " target="_blank">
                                 <i class="fas fa-envelope-square fa-2x" ></i>
                             </a>
                         </p>
                     </div>
                     <div class="col-md-6">
                         <p class="social">
-                            <a href="https://web.facebook.com/irinstitute">
+                            <a href="https://web.facebook.com/irinstitute" target="_blank">
                                 <i class="fab fa-facebook fa-2x"></i>
                             </a>
                         </p>
                         <p class="social">
-                            <a href="https://www.youtube.com/channel/UCAYITCyoYlXxyN8BGhpem6A">
+                            <a href="https://www.youtube.com/channel/UCAYITCyoYlXxyN8BGhpem6A" target="_blank">
                                 <i class="fab fa-youtube fa-2x"></i>
                             </a>
                         </p>
