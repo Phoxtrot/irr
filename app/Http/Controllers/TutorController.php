@@ -59,7 +59,11 @@ class TutorController extends Controller
         return redirect()->route('ramadansuccess');
 
     }
-
+    public function destroy(Tutor $tutor)
+    {
+        $tutor->delete();
+        return  redirect()->route('tutor.index')->with('status','Student deleted sucessfully');
+    }
     // Filter by gender
     public function male()
     {

@@ -16,6 +16,11 @@ class StudentController extends Controller
 
         return  view('admin.studentDetails', compact('student'));
     }
+    public function destroy(Student $student)
+    {
+        $student->delete();
+        return  redirect()->route('student.index')->with('status','Student deleted sucessfully');
+    }
     // Filter by gender
     public function male()
     {
